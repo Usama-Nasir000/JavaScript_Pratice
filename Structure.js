@@ -1,51 +1,47 @@
 
-class Stack {
-    constructor() {
-        this.items = [];
-    }
+function Stack_Struc () {
+    return {Items:[],
 
-    push(element) {
-        this.items.push(element);
-    }
-
-    pop() {
-        return this.items.pop();
-    }
-
-    peek() {
-        if (this.isEmpty()) {
-            console.log("Empty");
-        } else {
-            return this.items[this.items.length - 1];
-        }
-    }
-
-    isEmpty() {
-        return this.items.length === 0;
-    }
-
-    size() {
-        return this.items.length;
-    }
-
-    print() {
-        if (this.isEmpty()) {
-            console.log("Stack is Empty");
-        } else {
-            console.log(this.items);
-        }
+    push : function(element){
+        this.Items.push(element)
+    },
+    pop : function(){
+       return this.Items.pop()
+    },
+    size : function(){
+        return this.Items.length
+    },
+    print : function(){
+        console.log(this.Items)
+    },
+    peek : function(){
+        return this.Items[this.Items.length-1]
     }
 }
+}
+const Stack_1 = Stack_Struc()
 
+Stack_1.push(25)
+Stack_1.push(35)
+Stack_1.push(45)
+Stack_1.push(20)
+Stack_1.push(30)
+Stack_1.push(40)
+Stack_1.print()
+console.log(Stack_1.pop()) 
+console.log(Stack_1.size())
+console.log(Stack_1.peek())
 
-const MY_Stack = new Stack();
-MY_Stack.push(10);
-MY_Stack.push(20);
-MY_Stack.push(30);
+// console.log("abcd")
+const Stack_2 = Stack_Struc()
 
-console.log("Peek:", MY_Stack.peek());
-console.log("Size:", MY_Stack.size());
-console.log("Is Empty:", MY_Stack.isEmpty());
-
-MY_Stack.print();
-console.log(MY_Stack.pop())
+Stack_2.push(1)
+Stack_2.push(5)
+Stack_2.push(10)
+Stack_2.push(15)
+Stack_2.push(16)
+Stack_2.push(19)
+Stack_2.print()
+console.log(Stack_2.pop()) 
+console.log(Stack_2.size())
+console.log(Stack_2.peek())
